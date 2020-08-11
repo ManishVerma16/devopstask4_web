@@ -12,7 +12,7 @@ spec:
   - port: 80
     targetPort: 80
     nodePort: 31000
-    
+
 ---
 
 apiVersion: apps/v1
@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: web-con
-        image: manishverma16/webserver-apache-php:v1
+        image: manishverma16/webserver-apache:v1
 
 
 
