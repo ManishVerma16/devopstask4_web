@@ -12,20 +12,7 @@ spec:
   - port: 80
     targetPort: 80
     nodePort: 31000
----
-
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: web-pvc
-  labels:
-    app: web
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 2Gi
+    
 ---
 
 apiVersion: apps/v1
@@ -53,13 +40,7 @@ spec:
     spec:
       containers:
       - name: web-con
-        image: manishverma16/webserver-apache:v1
-        volumeMounts:
-          - name: web-vol
-            mountPath: /var/www/html
-      volumes:
-      - name: web-vol
-        persistentVolumeClaim:
-          claimName: web-pvc
+        image: manishverma16/webserver-apache-php:v1
+
 
 
