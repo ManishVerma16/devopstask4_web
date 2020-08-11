@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: web-con
-        image: manishverma16/webserver-apache:v1
+        image: manishverma16/webserver-apache-php:v1
 
 
 
