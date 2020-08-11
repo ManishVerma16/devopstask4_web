@@ -5,7 +5,7 @@ RUN  yum install sudo -y
 RUN yum install /sbin/service -y
 RUN  yum install php -y
 
-COPY  /workspace/linux.html /var/www/html/
+COPY  linux.html /var/www/html/
 
 EXPOSE 80
 
